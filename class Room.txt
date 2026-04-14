@@ -1,0 +1,402 @@
+Test 1: Entering Invalid option as 0, then option 5 to view all loaded rooms, and exit
+****************************************
+      Welcome to YYC Hotel System       
+****************************************
+10 rooms have been loaded
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 0
+Invalid option.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 5
+
+All Rooms
+Room 101 | Single | Price: 5000.0 | Occupied by John Smith
+Room 102 | Double | Price: 8000.0 | Occupied by Maria Garcia
+Room 103 | Double | Price: 8000.0 | Occupied by Robert Johnson
+Room 104 | Suite | Price: 12000.0 | Available
+Room 105 | Single | Price: 5000.0 | Occupied by Sarah Williams
+Room 106 | Double | Price: 8000.0 | Occupied by David Brown
+Room 107 | Suite | Price: 12000.0 | Occupied by Emily Davis
+Room 108 | Single | Price: 5000.0 | Available
+Room 109 | Double | Price: 8000.0 | Occupied by Michael Wilson
+Room 110 | Double | Price: 8000.0 | Available
+================
+    SUMMARY     
+================
+Total Rooms: 10
+Available: 3
+Occupied: 7
+
+----------------------------------------
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 6
+Saved. Goodbye.
+
+Test 2: Adding a room which exists and removing a room which does not exist 
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 1
+Enter room number: 101
+Room already exists.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 2
+Enter room number to remove: 200
+Room not found.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option:
+
+Test 3: Adding or removing a room with invalid room number 
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 1
+Enter room number: A200
+Invalid room number.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 2
+Enter room number to remove: A101
+Invalid room number.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option:
+
+Test 4: Adding a room with invalid room type or invalid price (price <= 0)
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 1
+Enter room number: 200
+Enter room type: triple
+Room type must be one of these values ['Single', 'Double', 'Suite']
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 1
+Enter room number: 200
+Enter room type: SINGLE
+Enter room price: -20
+Price should be > 0
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option:
+
+Test 5: Adding a room with valid values then option 5
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 1
+Enter room number: 111
+Enter room type: single
+Enter room price: 5000
+Room added.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 5
+
+All Rooms
+Room 101 | Single | Price: 5000.0 | Occupied by John Smith
+Room 102 | Double | Price: 8000.0 | Occupied by Maria Garcia
+Room 103 | Double | Price: 8000.0 | Occupied by Robert Johnson
+Room 104 | Suite | Price: 12000.0 | Available
+Room 105 | Single | Price: 5000.0 | Occupied by Sarah Williams
+Room 106 | Double | Price: 8000.0 | Occupied by David Brown
+Room 107 | Suite | Price: 12000.0 | Occupied by Emily Davis
+Room 108 | Single | Price: 5000.0 | Available
+Room 109 | Double | Price: 8000.0 | Occupied by Michael Wilson
+Room 110 | Double | Price: 8000.0 | Available
+Room 111 | Single | Price: 5000.0 | Available
+================
+    SUMMARY     
+================
+Total Rooms: 11
+Available: 4
+Occupied: 7
+
+----------------------------------------
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option:
+
+Test 6: Removing a room then option 5
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 2
+Enter room number to remove: 111
+Room removed.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 5
+
+All Rooms
+Room 101 | Single | Price: 5000.0 | Occupied by John Smith
+Room 102 | Double | Price: 8000.0 | Occupied by Maria Garcia
+Room 103 | Double | Price: 8000.0 | Occupied by Robert Johnson
+Room 104 | Suite | Price: 12000.0 | Available
+Room 105 | Single | Price: 5000.0 | Occupied by Sarah Williams
+Room 106 | Double | Price: 8000.0 | Occupied by David Brown
+Room 107 | Suite | Price: 12000.0 | Occupied by Emily Davis
+Room 108 | Single | Price: 5000.0 | Available
+Room 109 | Double | Price: 8000.0 | Occupied by Michael Wilson
+Room 110 | Double | Price: 8000.0 | Available
+================
+    SUMMARY     
+================
+Total Rooms: 10
+Available: 3
+Occupied: 7
+
+----------------------------------------
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option:
+
+Test 7: Checking in a guest with invalid and invalid data then option 5
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 3
+Enter room number: A101
+Enter guest name: 
+Invalid data - Enter valid values for room number or guest name.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 3
+Enter room number: 200
+Enter guest name: Hamdy Ibrahim
+Room not found.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 3
+Enter room number: 101
+Enter guest name: Hamdy Ibrahim
+Room is already occupied.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 3
+Enter room number: 110
+Enter guest name: Hamdy Ibrahim
+Guest checked in.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 5
+
+All Rooms
+Room 101 | Single | Price: 5000.0 | Occupied by John Smith
+Room 102 | Double | Price: 8000.0 | Occupied by Maria Garcia
+Room 103 | Double | Price: 8000.0 | Occupied by Robert Johnson
+Room 104 | Suite | Price: 12000.0 | Available
+Room 105 | Single | Price: 5000.0 | Occupied by Sarah Williams
+Room 106 | Double | Price: 8000.0 | Occupied by David Brown
+Room 107 | Suite | Price: 12000.0 | Occupied by Emily Davis
+Room 108 | Single | Price: 5000.0 | Available
+Room 109 | Double | Price: 8000.0 | Occupied by Michael Wilson
+Room 110 | Double | Price: 8000.0 | Occupied by Hamdy Ibrahim
+================
+    SUMMARY     
+================
+Total Rooms: 10
+Available: 2
+Occupied: 8
+
+----------------------------------------
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option:
+
+Test 8: Checking out a guest with invalid and invalid data then option 5
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 4
+Enter room number: A300
+Invalid room number.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 4
+Enter room number: 200
+Room not found.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 4
+Enter room number: 104
+Room is already available.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 4
+Enter room number: 110
+Guest checked out.
+
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 5
+
+All Rooms
+Room 101 | Single | Price: 5000.0 | Occupied by John Smith
+Room 102 | Double | Price: 8000.0 | Occupied by Maria Garcia
+Room 103 | Double | Price: 8000.0 | Occupied by Robert Johnson
+Room 104 | Suite | Price: 12000.0 | Available
+Room 105 | Single | Price: 5000.0 | Occupied by Sarah Williams
+Room 106 | Double | Price: 8000.0 | Occupied by David Brown
+Room 107 | Suite | Price: 12000.0 | Occupied by Emily Davis
+Room 108 | Single | Price: 5000.0 | Available
+Room 109 | Double | Price: 8000.0 | Occupied by Michael Wilson
+Room 110 | Double | Price: 8000.0 | Available
+================
+    SUMMARY     
+================
+Total Rooms: 10
+Available: 3
+Occupied: 7
+
+----------------------------------------
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 
+
+Test 9: Exit the program and save the room data in bookings.csv file
+1) Add Room
+2) Remove Room
+3) Check In Guest
+4) Check Out Guest
+5) View All Rooms
+6) Exit
+Select option: 6
+Saved. Goodbye.

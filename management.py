@@ -1,5 +1,3 @@
-from ast import main
-
 import room as rm
 
 DATA_FILE = "rooms.txt"
@@ -27,7 +25,7 @@ def load_rooms(file_path=DATA_FILE):
 def save_rooms(file_path, room_list):
 	with open(file_path, 'w') as file:
 		for r in room_list:
-			file.write(f"{r.get_room_number()},{r.get_room_type()},{r.get_price()},{r.get_guest_name()}\n")
+			file.write(f"{r.get_room_number()},{r.get_room_type()},{r.get_room_price()},{r.get_guest_name()}\n")
 
 
 def find_room_index(room_list, room_number):
@@ -156,7 +154,7 @@ def view_all_rooms(room_list):
 	for room in room_list:
 		room_number = room.get_room_number()
 		room_type = room.get_room_type()
-		room_price = room.get_price()
+		room_price = room.get_room_price()
 
 		if room.is_available():
 			status = "Available"
@@ -169,12 +167,20 @@ def view_all_rooms(room_list):
 			occupied_count += 1
 
 	print("=" * 16)
-	print("     SUMMARY    ")
+	print("    SUMMARY    ")
 	print("=" * 16)
 	print(f"Total Rooms: {len(room_list)}")
 	print(f"Available rooms: {available_count}")
 	print(f"Occupied rooms: {occupied_count}\n")
-	print("=" * 40)
+	print("-" * 40)
+
+def main():
+	room_list = load_rooms(DATA_FILE)
+
+	print("*" * 40)
+	print("      Welcome to YYC Hotel System      ")
+	print("*" * 40)
+	print(f"{len(room_list)} rooms have been loaded\n")
 
 	while True:
 
@@ -196,21 +202,27 @@ def view_all_rooms(room_list):
 
 		if option == 1:
 			room_list = add_room(room_list)
+			
 		elif option == 2:
 			room_list = remove_room(room_list)
+
 		elif option == 3:
 			room_list = check_in_guest(room_list)
+
 		elif option == 4:
 			room_list = check_out_guest(room_list)
+
 		elif option == 5:
 			view_all_rooms(room_list)
+
 		elif option == 6:
 			save_rooms(DATA_FILE, room_list)
 			print("Saved. Goodbye.")
+			break
 
 		else:
 			print("Invalid option.")
 
+
 if __name__ == "__main__":
 	main()
-	

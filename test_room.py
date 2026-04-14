@@ -1,3 +1,4 @@
+
 import room as rm
 
 
@@ -17,7 +18,7 @@ def main():
 	current_room = room_list[0]
 	print(f"Room Number: {current_room.get_room_number()}")
 	print(f"Room Type: {current_room.get_room_type()}")
-	print(f"Price: {current_room.get_price()}")
+	print(f"Room Price: {current_room.get_room_price()}")
 	print(f"Guest Name: {current_room.get_guest_name()}")
 	print()
 
@@ -67,12 +68,12 @@ def main():
 	# Test setters
 	print("Testing setters:")
 	current_room = room_list[1]  # Room 102
-	print(f"Before - Room: {current_room.get_room_number()}, Type: {current_room.get_room_type()}, Price: {current_room.get_price()}")
+	print(f"Before - Room: {current_room.get_room_number()}, Type: {current_room.get_room_type()}, Price: {current_room.get_room_price()}")
 	current_room.set_room_number(202)
 	current_room.set_room_type("Suite")
-	current_room.set_price(15000.0)
+	current_room.set_room_price(15000.0)
 	current_room.set_guest_name("New Guest")
-	print(f"After - Room: {current_room.get_room_number()}, Type: {current_room.get_room_type()}, Price: {current_room.get_price()}, Guest: {current_room.get_guest_name()}")
+	print(f"After - Room: {current_room.get_room_number()}, Type: {current_room.get_room_type()}, Price: {current_room.get_room_price()}, Guest: {current_room.get_guest_name()}")
 	print()
 
 	# Print all rooms using __str__ method
